@@ -1,0 +1,3 @@
+TODOLIST
+
+Charlie Henriksson Medieinstitutet 2019

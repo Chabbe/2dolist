@@ -1,0 +1,24 @@
+{
+  "name": "db2do",
+  "version": "1.1.2",
+  "description": "Inlämningsuppgift todo-list",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chabbe/DB2DO.git"
+  },
+  "author": "Woody Wombpecker",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Chabbe/DB2DO/issues"
+  },
+  "homepage": "https://github.com/Chabbe/DB2DO#readme",
+  "devDependencies": {
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "mongoose": "^5.8.11"
+  }
+}
