@@ -2,11 +2,19 @@ const express = require('express');
 const TodoItem = require('../model/todoItem.js')
 const router = express.Router();
 
-
+const items = 6;
 
 router.get('/todoList', async (req, res) => {
-    const todos = await TodoItem.find()
-    res.render("todoList", {
+    const pageNr = req.query.page;
+    const sortName = req.query.sort;
+    const todos = await TodoItem
+        .find()
+        .sort({
+            text: sortName
+        })
+        .skip((pageNr - 1) * items)
+        .limit(items)
+    res.render('todoList', {
         todos
     });
 })

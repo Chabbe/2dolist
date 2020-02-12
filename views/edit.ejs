@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/main.css">
+    <title>CHANGE oF HEART</title>
+</head>
+
+<body>
+
+    <h1>WHATCHU WANNA CHANGE?</h1>
+
+    <form action="/update/:id" method="post">
+
+        <input type="text" name="text" value="<%=foundItem.text%> ">
+        <input type="text" name="id" value="<%=foundItem._id%>" hidden>
+
+        <button type="submit">Ändra</button>
+
+    </form>
+</body>
+
+</html>
