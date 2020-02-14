@@ -4,7 +4,10 @@
   "description": "Inlämningsuppgift todo-list",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cy:run": "cypress run -- --record --spec 'cypress/integration/todo_ui_spec.js'",
+    "cypress": "cypress open",
+    "unittest": "mocha",
+    "test": "npm run unittest && npm run cy:run"
   },
   "repository": {
     "type": "git",
@@ -17,8 +20,13 @@
   },
   "homepage": "https://github.com/Chabbe/DB2DO#readme",
   "devDependencies": {
+    "cypress": "^4.0.1",
     "ejs": "^3.0.1",
     "express": "^4.17.1",
     "mongoose": "^5.8.11"
+  },
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^7.0.1"
   }
 }
