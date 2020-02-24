@@ -1,0 +1,26 @@
+body {
+    background-color: #055;
+    font-family: monospace;
+    font-size: 2em;
+    text-align: center;
+    font-weight: 900;
+}
+
+a {
+    font-size: 0.5em;
+    text-decoration: none;
+    color: #f67e54;
+}
+
+span {
+    margin-top: 20px;
+    color: #4ed3c1;
+}
+
+input::placeholder {
+    padding-left: 10px;
+}
+
+.sort {
+    font-size: 1.5em;
+}
