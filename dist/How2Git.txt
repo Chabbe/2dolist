@@ -1,0 +1,11 @@
+1. git init i mappens directory
+2. git status
+3. .gitignore
+    node_modules/
+    package.lock.JSON/
+    config/
+4. git add . (punkt lägger till alla filer så deras ändringar trackas, funkar som att stagea
+)
+5. git commit -m "message/commit"
+6. git remote add origin "url"
+7. git push origin master

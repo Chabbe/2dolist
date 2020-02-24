@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Le magnifiqué 2DO-list!</title>
+
+    <link rel="stylesheet" href="/main.css">
+</head>
+
+<body>
+    <h1>Le magnifiqué 2DO-list!</h1>
+    <% todos.forEach( (todoItems)=>{ %>
+
+    <div>
+        <span>
+            <%= todoItems.text %>
+        </span><br>
+        <a href="/update/<%=todoItems._id%>">Ändra</a><br>
+        <a href="/delete/<%=todoItems._id%>">Ta bort</a>
+    </div>
+
+
+
+
+    <%  }) %>
+
+    <a href="/todolist/?sort=1" class="sort">Namn a-ö</a>
+    <a href="/todolist/?sort=-1" class="sort">Namn ö-a</a>
+    <br>
+    <a href="/todolist/?page=1">1</a>
+    <a href="/todolist/?page=2">2</a>
+    <a href="/todolist/?page=3">3</a>
+
+    <div>
+        <form action="/todolist" method="post">
+
+            <input type="text" name="text" placeholder="WHATCHU WANNA DO">
+            <button type="submit">P O S T</button>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>
