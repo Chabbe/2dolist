@@ -25,9 +25,9 @@
   "homepage": "https://github.com/Chabbe/DB2DO#readme",
   "devDependencies": {
     "cypress": "^4.0.1",
-    "ejs": "^3.0.1",
+    "ejs": "^3.0.2",
     "express": "^4.17.1",
-    "mongoose": "^5.8.11"
+    "mongoose": "^5.9.7"
   },
   "dependencies": {
     "chai": "^4.2.0",
