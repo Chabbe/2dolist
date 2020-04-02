@@ -5,9 +5,6 @@ const commentRoute = require('./route/itemRoute.js');
 const express = require('express');
 const app = express();
 
-if (process.env.NODE_ENV !== 'production') require('dotenv').config()
-
-
 app.use(express.urlencoded({
     extended: true
 }));
@@ -24,7 +21,7 @@ const options = {
     useNewUrlParser: true
 }
 
-mongoose.connect(process.env.DATABASE, options).then(() => {
+mongoose.connect(config.databaseURL, options).then(() => {
     console.log(`You are now connected to ${port}. ---->>> Please visit localhost:${port}/todolist to get started!`);
     app.listen(port);
 });
