@@ -1,6 +1,9 @@
+if (process.env.NODE_ENV !== 'production') require('dotenv').config()
+
+
+
 const config = {
-    databaseURL: 'mongodb+srv://chabbe:Hammarby123@crm-z4gjx.mongodb.net/test?retryWrites=true&w=majority'
-
+    databaseURL: process.env.DATABASE,
 }
-
-module.exports = config;
+ 
+module.exports = config
