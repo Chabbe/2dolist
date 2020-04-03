@@ -4,7 +4,7 @@ const router = express.Router();
 
 const items = 6;
 
-router.get('/todoList', async (req, res) => {
+router.get('/', async (req, res) => {
     const pageNr = req.query.page;
     const sortName = req.query.sort;
     const todos = await TodoItem
@@ -19,14 +19,14 @@ router.get('/todoList', async (req, res) => {
     });
 })
 
-router.post('/todolist', async (req, res) => {
+router.post('/', async (req, res) => {
 
     const todo = new TodoItem({
         text: req.body.text,
     })
 
     await todo.save();
-    res.redirect('/todolist')
+    res.redirect('/')
 
 })
 
@@ -35,7 +35,7 @@ router.get('/delete/:id', async (req, res) => {
         .deleteOne({
             _id: req.params.id
         });
-    res.redirect('/todolist')
+    res.redirect('/')
 })
 
 router.get('/update/:id', async (req, res) => {
@@ -59,7 +59,7 @@ router.post('/update/:id', async (req, res) => {
         }
     })
 
-    res.redirect('/todolist')
+    res.redirect('/')
 })
 
 module.exports = router;
