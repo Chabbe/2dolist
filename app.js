@@ -21,7 +21,7 @@ const options = {
     useNewUrlParser: true
 }
 
-mongoose.connect(config.databaseURL, options).then(() => {
+mongoose.connect(process.env.DATABASE, options).then(() => {
     console.log(`You are now connected to ${port}. ---->>> Please visit localhost:${port}/todolist to get started!`);
     app.listen(port);
 });
